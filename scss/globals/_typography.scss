@@ -1,22 +1,11 @@
-////////////////////////
-// TYPOGRAPHY
-////////////////////////
+// anything that flows in the context of a content section
 
-$font-size-root: 16px;
-$font-family: 'Roboto', Helvetica, Arial;
+// HEADER
 
-body {
-  font-family: $font-family;
-  font-size: $font-size-root;
-  line-height: 1.25;
-}
+// PARAGRAPH
 
-body, h1, h2, h3, h4, h5, h6 {
-  font-size-adjust: 0.5;
-}
+// LINKS
 
-@include bp($break-sm) {
-  body {
-    line-height: 1.375em;
-  }
-}
+// CODE
+
+// BLOCKQUOTE
