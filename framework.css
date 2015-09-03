@@ -176,3 +176,84 @@ table {
 td,
 th {
   padding: 0; }
+
+body {
+  font-size: 16px; }
+
+p, h1, h2, h3, h4, h5, h6 {
+  font-family: Helvetica, Arial, sans-serif; }
+
+h1 {
+  font-size: 2em;
+  line-height: 1.25em;
+  color: #231F20; }
+
+h2 {
+  font-size: 1.625em;
+  line-height: 1.15384615em;
+  color: #231F20; }
+
+h3 {
+  font-size: 1.375em;
+  line-height: 1.13636364em;
+  color: #231F20; }
+
+h4 {
+  font-size: 1.125em;
+  line-height: 1.11111111em;
+  color: #231F20; }
+
+h5 {
+  font-size: 1em;
+  line-height: 1.11111111em;
+  color: #231F20; }
+
+h6 {
+  font-size: 1em;
+  line-height: 1.11111111em;
+  color: #231F20; }
+
+p {
+  font-size: 1em;
+  line-height: 1.25em;
+  color: #5A5A5A; }
+
+a {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #1FA2ED;
+  font-size: inherit;
+  text-decoration: none; }
+  a:hover, a:focus {
+    color: #1086c9; }
+  a:visited {
+    color: #0B0080; }
+
+@media (min-width: 48em) {
+  h1 {
+    font-size: 2.5em;
+    line-height: 1.125em; }
+  h2 {
+    font-size: 2em;
+    line-height: 1.25em; }
+  h3 {
+    font-size: 1.5em;
+    line-height: 1.25em; }
+  h4 {
+    font-size: 1.125em;
+    line-height: 1.22222222em; }
+  p {
+    line-height: 1.375em; } }
+
+@media (min-width: 64em) {
+  h1 {
+    font-size: 3em;
+    line-height: 1.05em; }
+  h2 {
+    font-size: 2.25em;
+    line-height: 1.25em; }
+  h3 {
+    font-size: 1.75em;
+    line-height: 1.25em; }
+  h4 {
+    font-size: 1.125em;
+    line-height: 1.22222222em; } }

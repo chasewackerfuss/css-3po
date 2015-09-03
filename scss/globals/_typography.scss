@@ -1,11 +1,130 @@
-// anything that flows in the context of a content section
+////////////////////////
+// MOBILE TYPOGRAPHY
+////////////////////////
 
-// HEADER
+body {
+  font-size: 16px;
+}
 
-// PARAGRAPH
+p, h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family;
+}
 
-// LINKS
+h1 {
+  font-size: 2em;
+  line-height: 1.25em;
+  color: $h1-color;
+}
 
-// CODE
+h2 {
+  font-size: 1.625em;
+  line-height: 1.15384615em;
+  color: $h2-color;
+}
 
-// BLOCKQUOTE
+h3 {
+  font-size: 1.375em;
+  line-height: 1.13636364em;
+  color: $h3-color;
+}
+
+h4 {
+  font-size: 1.125em;
+  line-height: 1.11111111em;
+  color: $h4-color;
+}
+
+h5 {
+  font-size: 1em;
+  line-height: 1.11111111em;
+  color: $h5-color;
+}
+
+h6 {
+  font-size: 1em;
+  line-height: 1.11111111em;
+  color: $h6-color;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.25em;
+  color: $body-color;
+}
+
+a {
+  font-family: $font-family;
+  color: $link-color;
+  font-size: inherit;
+  text-decoration: none;
+  &:hover, &:focus {
+    color: $link-color--hover;
+  }
+  &:visited {
+    color: $link-color--visited;
+  }
+}
+
+// CODE -- TODO
+
+// BLOCKQUOTE -- TODO
+
+////////////////////////
+// TABLET TYPOGRAPHY
+////////////////////////
+
+@include bp($break-md) {
+
+  h1 {
+    font-size: 2.5em;
+    line-height: 1.125em;
+  }
+
+  h2 {
+    font-size: 2em;
+    line-height: 1.25em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    line-height: 1.25em;
+  }
+
+  h4 {
+    font-size: 1.125em;
+    line-height: 1.22222222em;
+  }
+
+  p {
+    line-height: 1.375em;
+  }
+
+}
+
+////////////////////////
+// DESKTOP TYPOGRAPHY
+////////////////////////
+
+@include bp($break-lg) {
+
+  h1 {
+    font-size: 3em;
+    line-height: 1.05em;
+  }
+
+  h2 {
+    font-size: 2.25em;
+    line-height: 1.25em;
+  }
+
+  h3 {
+    font-size: 1.75em;
+    line-height: 1.25em;
+  }
+
+  h4 {
+    font-size: 1.125em;
+    line-height: 1.22222222em;
+  }
+
+}

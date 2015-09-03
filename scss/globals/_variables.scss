@@ -1,4 +1,13 @@
 ////////////////////////
+// BREAKPOINTS
+////////////////////////
+
+$break-xl: 80em; // 1280
+$break-lg: 64em; // 1024
+$break-md: 48em; // 768
+$break-sm: 30em; // 480
+
+////////////////////////
 // COLOR VARIABLES
 ////////////////////////
 
@@ -10,32 +19,6 @@ $white-smoke:                     #F5F5F5;
 $abyss:                           #231F20;
 $emerald:                         #1EC279;
 $forrest:                         #00A968;
-
-// FRAMEWORK COLOR REFERENCES
-
-$brand-primary: $summer-sky;
-$brand-secondary: $deep-sea;
-$brand-tertiary: $white-smoke;
-
-// TEXT COLORING
-
-$body-color:                      $brand-primary;
-$h1-color:                        $brand-secondary;
-$h2-color:                        $brand-secondary;
-$h3-color:                        $brand-secondary;
-$h4-color:                        $brand-secondary;
-$h5-color:                        $brand-secondary;
-$h6-color:                        $brand-secondary;
-
-
-
-
-
-
-
-
-
-
 
 // SECONDARY COLORS
 
@@ -72,6 +55,7 @@ $h6-color:                        $abyss;
 
 $link-color:                      $summer-sky;
 $link-color--muted:               $midnight;
+$link-color--hover:               darken($link-color, 10%);
 $link-color--visited:             $blueberry;
 
 // BUTTON COLORING
@@ -79,8 +63,11 @@ $link-color--visited:             $blueberry;
 $btn-primary-color:               $emerald;
 $btn-secondary-color:             $valentine;
 
+////////////////////////
+// TYPOGRAPHY VARIABLES
+////////////////////////
 
-
+$font-family: Helvetica, Arial, sans-serif;
 
 
 
