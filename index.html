@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>Framework Styles</title>
+    <link rel="stylesheet" type="text/css" href="framework.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="grid">
+        <div class="grid__item xs-1">
+          <p>This is a one column grid item</p>
+        </div>
+        <div class="grid__item xs-11">
+          <p>This is a one column grid item</p>
+        </div>
+      </div>
+    </div>
+
+    <p>This is the home page for the HelloWorld Web application. </p>
+    <p>To prove that they work, you can execute either of the following links:
+    <ul>
+      <li>To a <a href="hello.jsp">JSP page</a>.
+      <li>To a <a href="hello">servlet</a>.
+    </ul>
+    <h1>This is an H1 tag</h1>
+    <h2>This is an H2 tag</h2>
+    <h3>This is an H3 tag</h3>
+    <h4>This is an H4 tag</h4>
+    <h5>This is an H5 tag</h5>
+    <h6>This is an H6 tag</h6>
+
+    <button id="openModal">Open Modal</button>
+
+
+    <!-- MODAL -->
+    <div class="modal-wrap">
+      <div class="modal">
+        <button class="modal__close-btn" aria-label="close"></button>
+        <div class="modal__header">
+          <h2>This is an H2 tag</h2>
+        </div>
+        <div class="modal__body">
+          <p>This is the home page for the HelloWorld Web application. </p>
+          <p>To prove that they work, you can execute either of the following links:
+          <ul>
+            <li>To a <a href="hello.jsp">JSP page</a>.
+            <li>To a <a href="hello">servlet</a>.
+          </ul>
+        </div>
+        <div class="modal__footer">
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+  <script>
+    $('#openModal').click(function() {
+      $('.modal-wrap').toggleClass('is-open');
+    });
+    $('.modal__close-btn').click(function() {
+      $('.modal-wrap').toggleClass('is-open');
+    });
+  </script>
+
+</html>

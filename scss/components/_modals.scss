@@ -1,0 +1,94 @@
+////////////////////////
+////////////////////////
+// MODAL VARIABLES
+////////////////////////
+
+$color--modal-overlay:             transparentize($blue-asphalt, 0.1);
+$color--modal-wrap:                $fog;
+$color--modal-header:              darken($fog, 5%);
+$color--modal-footer:              darken($fog, 5%);
+
+%modal-padding {
+  padding: 1em;
+}
+
+////////////////////////
+////////////////////////
+// MODAL STYLES
+////////////////////////
+
+.modal-wrap {
+  display: none;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 9000;
+  overflow-y: scroll;
+  padding: 0 20px;
+  background: $color--modal-overlay;
+}
+
+.is-open {
+  display: block;
+  .modal  {
+    @extend .animate-fade-in;
+  }
+}
+
+.modal {
+  max-width: 850px;
+  margin: 5em auto;
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  background: $color--modal-wrap;
+
+  &__header {
+    background: $color--modal-header;
+    width: 100%;
+    @extend %modal-padding;
+
+    // removes margin off any header in the modal header
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0 0;
+    }
+
+  }
+
+  &__body {
+    width: 100%;
+    @extend %modal-padding;
+  }
+
+  &__footer {
+    background: $color--modal-footer;
+    width: 100%;
+    @extend %modal-padding;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background: $color--modal-header;
+    padding: 6px 5px;
+
+    &:before {
+      content: "\2716";
+    }
+
+    &:hover, &:focus {
+      @extend %grow;
+      outline: none;
+      box-shadow: 0 0 3px darken($color--modal-header, 80%);
+    }
+
+  }
+
+}

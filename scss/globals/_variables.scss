@@ -1,12 +1,16 @@
 ////////////////////////
+////////////////////////
 // BREAKPOINTS
 ////////////////////////
 
-$break-xl: 80em; // 1280
-$break-lg: 64em; // 1024
-$break-md: 48em; // 768
-$break-sm: 30em; // 480
+$break--xl:                        80em; // 1280
+$break--lg:                        64em; // 1024
+$break--md:                        48em; // 768
+$break--sm:                        30em; // 480
 
+
+
+////////////////////////
 ////////////////////////
 // COLOR VARIABLES
 ////////////////////////
@@ -37,50 +41,61 @@ $metallic-silver:                 #CAD7DE;
 $scorpion:                        #5A5A5A;
 
 
+
+////////////////////////
 ////////////////////////
 // FRAMEWORK COLORING
 ////////////////////////
 
+// BODY COLORING
+
+$color--body-bg:                   $fog;
+
 // TEXT COLORING
 
-$body-color:                      $scorpion;
-$h1-color:                        $abyss;
-$h2-color:                        $abyss;
-$h3-color:                        $abyss;
-$h4-color:                        $abyss;
-$h5-color:                        $abyss;
-$h6-color:                        $abyss;
+$color--body:                      $scorpion;
+$color--h1:                        $abyss;
+$color--h2:                        $abyss;
+$color--h3:                        $abyss;
+$color--h4:                        $abyss;
+$color--h5:                        $abyss;
+$color--h6:                        $abyss;
 
 // LINK COLORING
 
-$link-color:                      $summer-sky;
-$link-color--muted:               $midnight;
-$link-color--hover:               darken($link-color, 10%);
-$link-color--visited:             $blueberry;
+$color--link:                      $summer-sky;
+$color--link--muted:               $midnight;
+$color--link--hover:               darken($color--link, 10%);
+$color--link--visited:             $blueberry;
 
 // BUTTON COLORING
 
-$btn-primary-color:               $emerald;
-$btn-secondary-color:             $valentine;
+$color--btn-primary:               $emerald;
+$color--btn-secondary:             $valentine;
 
+// TABLE COLORING
+
+$color--table-bg:                  $metallic-silver;
+$color--table-cell-padding:        $fog;
+$color--table-border:              $metallic-silver;
+
+// HORIZONTAL RULE COLORING
+
+$color--horizontal-rule:           $metallic-silver;
+
+// MODAL COLORING
+
+$color--modal-overlay:             transparentize($blue-asphalt, 0.1);
+$color--modal-wrap:                $fog;
+$color--modal-header:              darken($fog, 5%);
+$color--modal-footer:              darken($fog, 5%);
+
+
+////////////////////////
 ////////////////////////
 // TYPOGRAPHY VARIABLES
 ////////////////////////
 
-$font-family: Helvetica, Arial, sans-serif;
-
-
-
-
-// $font-size-root
-// $font-family-base: "Lato", helvetica, arial;
-// $line-height: 1.6em;
-// $body-color
-// $body-bg
-// $abbr-border-color
-// $link-hover-color
-// $link-hover-decoration
-// $link-color
-// $table-bg
-// $table-cell-padding
-// $text-muted
+$base__font-size: 16px;
+$base__font-family: Helvetica, Arial, sans-serif;
+$base__line-height: 1.6em;

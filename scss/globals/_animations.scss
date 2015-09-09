@@ -1,0 +1,182 @@
+////////////////////////
+////////////////////////
+// ANIMATION MIXINS
+////////////////////////
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes $animation-name {
+    @content;
+  }
+  @-moz-keyframes $animation-name {
+    @content;
+  }
+  @keyframes $animation-name {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  animation: #{$str};
+}
+
+////////////////////////
+////////////////////////
+// SHAKE ANIMATION
+////////////////////////
+
+@include keyframes(shake) {
+  from, to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+.animate-shake {
+  @include animation('shake 1s');
+}
+
+////////////////////////
+////////////////////////
+// BOUNCE OUT ANIMATION
+////////////////////////
+
+@include keyframes(bounceOut) {
+  20% {
+    -webkit-transform: scale3d(.9, .9, .9);
+    transform: scale3d(.9, .9, .9);
+  }
+
+  50%, 55% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+}
+
+.animate-bounce-out {
+  @include animation('bounceOut .75s');
+}
+
+////////////////////////
+////////////////////////
+// FADE IN ANIMATION
+////////////////////////
+
+@include keyframes(fadeIn) {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  @include animation('fadeIn .1s');
+}
+
+////////////////////////
+////////////////////////
+// FADE OUT ANIMATION
+////////////////////////
+
+@include keyframes(fadeOut) {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.animate-fade-out {
+  @include animation('fadeOut .1s');
+}
+
+////////////////////////
+////////////////////////
+// FADE IN UP ANIMATION
+////////////////////////
+
+@include keyframes(fadeInUp) {
+  from {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.animate-fade-in-up {
+  @include animation('fadeInUp .1s');
+}
+
+
+////////////////////////
+////////////////////////
+// FADE OUT DOWN ANIMATION
+////////////////////////
+
+@include keyframes(fadeOutDown) {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+.animate-fade-out-down {
+  @include animation('fadeOutDown 1s');
+}
+
+////////////////////////
+////////////////////////
+// PULSE ANIMATION
+////////////////////////
+
+@include keyframes(pulse) {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.animate-pulse {
+  @include animation('pulse 1s');
+}
